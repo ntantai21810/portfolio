@@ -1,7 +1,7 @@
 "use client";
 
 import { forwardRef, ButtonHTMLAttributes } from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -80,39 +80,48 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 
 // Animated button wrapper using framer motion
-const MotionButton = forwardRef<
-  HTMLButtonElement,
-  ButtonProps & Omit<HTMLMotionProps<"button">, keyof ButtonProps>
->(({ className, variant = "primary", size = "md", children, ...props }, ref) => {
-  const baseStyles =
-    "relative inline-flex items-center justify-center font-medium transition-colors duration-300 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+interface MotionButtonProps {
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  children?: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
+}
 
-  const variants = {
-    primary:
-      "bg-primary text-primary-foreground shadow-lg shadow-primary/25",
-    secondary: "bg-secondary text-secondary-foreground",
-    outline: "border-2 border-primary text-primary",
-    ghost: "text-foreground",
-  };
+const MotionButton = forwardRef<HTMLButtonElement, MotionButtonProps>(
+  ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
+    const baseStyles =
+      "relative inline-flex items-center justify-center font-medium transition-colors duration-300 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
 
-  const sizes = {
-    sm: "h-9 px-4 text-sm",
-    md: "h-11 px-6 text-base",
-    lg: "h-14 px-8 text-lg",
-  };
+    const variants = {
+      primary:
+        "bg-primary text-primary-foreground shadow-lg shadow-primary/25",
+      secondary: "bg-secondary text-secondary-foreground",
+      outline: "border-2 border-primary text-primary",
+      ghost: "text-foreground",
+    };
 
-  return (
-    <motion.button
-      ref={ref}
-      className={cn(baseStyles, variants[variant], sizes[size], className)}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      {...props}
-    >
-      {children}
-    </motion.button>
-  );
-});
+    const sizes = {
+      sm: "h-9 px-4 text-sm",
+      md: "h-11 px-6 text-base",
+      lg: "h-14 px-8 text-lg",
+    };
+
+    return (
+      <motion.button
+        ref={ref}
+        className={cn(baseStyles, variants[variant], sizes[size], className)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        {...props}
+      >
+        {children}
+      </motion.button>
+    );
+  }
+);
 
 MotionButton.displayName = "MotionButton";
 

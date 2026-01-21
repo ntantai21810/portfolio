@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useMemo } from "react";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 interface ParticlesProps {
@@ -10,9 +10,9 @@ interface ParticlesProps {
 
 export function Particles({ count = 500 }: ParticlesProps) {
   const mesh = useRef<THREE.Points>(null);
-  const { size } = useThree();
 
-  const [positions, colors] = useMemo(() => {
+  const geometry = useMemo(() => {
+    const geo = new THREE.BufferGeometry();
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
 
@@ -38,7 +38,10 @@ export function Particles({ count = 500 }: ParticlesProps) {
       colors[i3 + 2] = mixedColor.b;
     }
 
-    return [positions, colors];
+    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    return geo;
   }, [count]);
 
   useFrame((state) => {
@@ -55,21 +58,7 @@ export function Particles({ count = 500 }: ParticlesProps) {
   });
 
   return (
-    <points ref={mesh}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={positions.length / 3}
-          array={positions}
-          itemSize={3}
-        />
-        <bufferAttribute
-          attach="attributes-color"
-          count={colors.length / 3}
-          array={colors}
-          itemSize={3}
-        />
-      </bufferGeometry>
+    <points ref={mesh} geometry={geometry}>
       <pointsMaterial
         size={0.05}
         vertexColors
