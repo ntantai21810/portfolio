@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Code2 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { navItems } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -51,11 +51,11 @@ export function Navbar() {
               e.preventDefault();
               handleNavClick("#home");
             }}
-            className="text-xl md:text-2xl font-bold gradient-text"
+            className="inline-flex items-center gap-2 text-xl md:text-2xl font-bold gradient-text"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            JD.
+            <Code2 className="h-7 w-7 md:h-8 md:w-8" />
           </motion.a>
 
           {/* Desktop Navigation */}

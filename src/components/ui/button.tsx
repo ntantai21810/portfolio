@@ -51,7 +51,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {isLoading && (
           <svg
-            className="absolute left-4 h-5 w-5 animate-spin"
+            className="mr-2 h-5 w-5 animate-spin flex-shrink-0"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -71,7 +71,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             />
           </svg>
         )}
-        <span className={cn(isLoading && "opacity-0")}>{children}</span>
+        {children}
       </button>
     );
   }

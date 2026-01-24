@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Code2 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { siteConfig, socialLinks } from "@/lib/data";
 
@@ -23,10 +23,10 @@ export function Footer() {
           <div className="text-center md:text-left">
             <motion.a
               href="#home"
-              className="text-2xl font-bold gradient-text inline-block mb-2"
+              className="inline-flex items-center gap-2 text-2xl font-bold gradient-text mb-2"
               whileHover={{ scale: 1.05 }}
             >
-              JD.
+              <Code2 className="h-8 w-8" />
             </motion.a>
             <p className="text-sm text-muted-foreground">
               © {currentYear} {siteConfig.name}. All rights reserved.
@@ -50,11 +50,6 @@ export function Footer() {
               </motion.a>
             ))}
           </div>
-
-          {/* Made with love */}
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Made with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using Next.js
-          </p>
         </div>
       </Container>
     </footer>

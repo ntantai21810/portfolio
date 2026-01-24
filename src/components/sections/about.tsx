@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { MapPin, Calendar, Briefcase, GraduationCap, Download } from "lucide-react";
+import { MapPin, Calendar, Briefcase, GraduationCap, Download, Code2 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -60,8 +60,8 @@ export function About() {
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Photo placeholder */}
                     <div className="flex-shrink-0">
-                      <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-4xl md:text-5xl text-white font-bold mx-auto md:mx-0">
-                        JD
+                      <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white mx-auto md:mx-0">
+                        <Code2 className="w-16 h-16 md:w-20 md:h-20" />
                       </div>
                     </div>
                     {/* Bio text */}

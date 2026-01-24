@@ -236,7 +236,7 @@ export function Contact() {
                       className="w-full"
                       isLoading={isLoading}
                     >
-                      <Send className="mr-2 h-5 w-5" />
+                      {!isLoading && <Send className="mr-2 h-5 w-5" />}
                       Send Message
                     </Button>
                   </form>

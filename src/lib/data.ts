@@ -1,13 +1,13 @@
 import { Project, Skill, Experience, SocialLink, NavItem } from "@/types";
 
 export const siteConfig = {
-  name: "John Doe",
+  name: "Tai Nguyen",
   title: "Full Stack Developer",
   description:
-    "A passionate full-stack developer crafting beautiful, performant web experiences with modern technologies.",
-  email: "hello@johndoe.dev",
-  location: "San Francisco, CA",
-  url: "https://johndoe.dev",
+    "Passionate developer with a love for creating beautiful and functional web experiences",
+  email: "nguyentai21.fit@gmail.com",
+  location: "Ho Chi Minh City, Vietnam",
+  url: "https://portfolio-dun-five-65.vercel.app/",
 };
 
 export const navItems: NavItem[] = [
@@ -18,62 +18,98 @@ export const navItems: NavItem[] = [
 ];
 
 export const skills: Skill[] = [
+  // Frontend
   { name: "React", level: 95, category: "frontend" },
-  { name: "Next.js", level: 90, category: "frontend" },
+  { name: "Next.js", level: 95, category: "frontend" },
   { name: "TypeScript", level: 90, category: "frontend" },
-  { name: "Tailwind CSS", level: 95, category: "frontend" },
-  { name: "Three.js", level: 75, category: "frontend" },
+  { name: "Tailwind CSS", level: 90, category: "frontend" },
+  { name: "Redux", level: 85, category: "frontend" },
+  { name: "Radix UI", level: 85, category: "frontend" },
+  { name: "MUI", level: 80, category: "frontend" },
+  { name: "Ant Design", level: 80, category: "frontend" },
+  { name: "Framer Motion", level: 80, category: "frontend" },
+  { name: "Three.js", level: 70, category: "frontend" },
+  // Backend
   { name: "Node.js", level: 85, category: "backend" },
-  { name: "Python", level: 80, category: "backend" },
+  { name: "NestJS", level: 85, category: "backend" },
+  { name: "Express", level: 80, category: "backend" },
   { name: "PostgreSQL", level: 80, category: "backend" },
   { name: "MongoDB", level: 75, category: "backend" },
-  { name: "GraphQL", level: 70, category: "backend" },
+  { name: "Kafka", level: 70, category: "backend" },
+  { name: "GraphQL", level: 75, category: "backend" },
+  { name: "Prisma", level: 80, category: "backend" },
+  // Tools & DevOps
   { name: "Git", level: 90, category: "tools" },
   { name: "Docker", level: 75, category: "tools" },
   { name: "AWS", level: 70, category: "tools" },
-  { name: "Figma", level: 80, category: "tools" },
+  { name: "Vercel", level: 85, category: "tools" },
+  { name: "CI/CD", level: 75, category: "tools" },
 ];
 
 export const experiences: Experience[] = [
   {
     id: "1",
-    title: "Senior Full Stack Developer",
-    company: "TechCorp Inc.",
-    location: "San Francisco, CA",
-    startDate: "Jan 2022",
+    title: "Full Stack Engineer",
+    company: "Cyberlogitec",
+    location: "Ho Chi Minh City, Vietnam",
+    startDate: "2024",
     endDate: "Present",
     description: [
-      "Led development of microservices architecture serving 1M+ users",
-      "Mentored team of 5 junior developers",
-      "Reduced page load times by 40% through optimization",
+      "Join a team of developers to migrate a legacy system to a modern tech stack",
+      "Work in an Agile environment with a focus on delivering high-quality software",
+      "Suggest and implement new features to improve user experience and system performance",
     ],
     type: "work",
   },
   {
     id: "2",
-    title: "Full Stack Developer",
-    company: "StartupXYZ",
-    location: "Remote",
-    startDate: "Jun 2020",
-    endDate: "Dec 2021",
+    title: "Front End Developer",
+    company: "SENS",
+    location: "Ho Chi Minh City, Vietnam",
+    startDate: "2022",
+    endDate: "2024",
     description: [
-      "Built and launched 3 production applications from scratch",
-      "Implemented CI/CD pipelines reducing deployment time by 60%",
-      "Collaborated with design team on UI/UX improvements",
+      "Join a team of developers to build and maintain web applications for enterprise clients focused on web3",
+      "Implemented responsive designs and integrated third-party APIs",
     ],
     type: "work",
   },
   {
     id: "3",
-    title: "B.S. Computer Science",
-    company: "University of California",
-    location: "Berkeley, CA",
-    startDate: "Aug 2016",
-    endDate: "May 2020",
+    title: "Software Development Fresher",
+    company: "Zalo",
+    location: "Ho Chi Minh City, Vietnam",
+    startDate: "2022",
+    endDate: "2022",
     description: [
-      "GPA: 3.8/4.0",
-      "Focus on Software Engineering and Machine Learning",
-      "Dean's List all semesters",
+      "Build a chat application with high performance and security",
+      "Optimize the code structure with clean architecture and SOLID principles",
+    ],
+    type: "work",
+  },
+  {
+    id: "4",
+    title: "Full Stack Developer",
+    company: "ITBee Solution",
+    location: "Ho Chi Minh City, Vietnam",
+    startDate: "2021",
+    endDate: "2022",
+    description: [
+      "Join a team as intern and then be promoted to full stack developer",
+      "Learn and build a web application for enterprise clients",
+    ],
+    type: "work",
+  },
+  {
+    id: "5",
+    title: "Bachelor of Computer Science",
+    company: "Ho Chi Minh City University of Science",
+    location: "Ho Chi Minh City, Vietnam",
+    startDate: "2019",
+    endDate: "2023",
+    description: [
+      "Graduated with honors",
+      "Specialized in software engineering and web technologies",
     ],
     type: "education",
   },
@@ -82,79 +118,39 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: "1",
-    title: "E-Commerce Platform",
+    title: "Watching movies",
     description:
-      "A full-featured e-commerce platform with real-time inventory, payments, and admin dashboard.",
+      "A full-featured movie website with movie information and trailers.",
     longDescription:
-      "Built a scalable e-commerce solution handling thousands of concurrent users with features like real-time inventory tracking, Stripe integration, and comprehensive admin analytics.",
-    image: "/projects/ecommerce.jpg",
-    technologies: ["Next.js", "TypeScript", "Prisma", "Stripe", "PostgreSQL"],
+      "Built a comprehensive movie website featuring movie information and trailers. With the ability to search, filter, and sort movies by genre, release date, and rating. Also with the ability to watch trailers and read reviews.",
+    image: "/projects/movies.jpg",
+    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind"],
     category: "fullstack",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://movies.taidesign.cloud/",
+    githubUrl: "https://github.com/movies-demo/frontend",
     featured: true,
   },
   {
     id: "2",
-    title: "AI Chat Application",
+    title: "Food delivery landing page",
     description:
-      "Real-time chat app with AI-powered responses and sentiment analysis.",
-    image: "/projects/chat.jpg",
-    technologies: ["React", "Node.js", "Socket.io", "OpenAI", "MongoDB"],
-    category: "fullstack",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    featured: true,
-  },
-  {
-    id: "3",
-    title: "Portfolio Dashboard",
-    description:
-      "Investment portfolio tracker with real-time market data and analytics.",
-    image: "/projects/dashboard.jpg",
-    technologies: ["React", "D3.js", "Python", "FastAPI", "Redis"],
+      "A landing page for a food delivery service.",
+    longDescription:
+      "Developed a landing page for a food delivery service. With responsive design and smooth animations.",
+    image: "/projects/food-delivery.jpg",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
     category: "frontend",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: "4",
-    title: "Task Management API",
-    description:
-      "RESTful API for task management with authentication and real-time updates.",
-    image: "/projects/api.jpg",
-    technologies: ["Node.js", "Express", "PostgreSQL", "Redis", "JWT"],
-    category: "backend",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: "5",
-    title: "3D Product Configurator",
-    description:
-      "Interactive 3D product customization tool for e-commerce.",
-    image: "/projects/3d.jpg",
-    technologies: ["Three.js", "React", "WebGL", "TypeScript"],
-    category: "frontend",
-    liveUrl: "https://example.com",
+    liveUrl: "https://food-deli.taidesign.cloud/",
+    githubUrl: "https://github.com/movies-demo/food-delivery",
     featured: true,
-  },
-  {
-    id: "6",
-    title: "DevOps Automation Suite",
-    description:
-      "Infrastructure automation tools for CI/CD and cloud deployment.",
-    image: "/projects/devops.jpg",
-    technologies: ["Python", "Docker", "Kubernetes", "Terraform", "AWS"],
-    category: "backend",
-    githubUrl: "https://github.com",
   },
 ];
 
 export const socialLinks: SocialLink[] = [
-  { name: "GitHub", url: "https://github.com", icon: "github" },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" },
-  { name: "Twitter", url: "https://twitter.com", icon: "twitter" },
-  { name: "Email", url: "mailto:hello@johndoe.dev", icon: "mail" },
+  { name: "GitHub", url: "https://github.com/ntantai21810", icon: "github" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/nguyentai21/", icon: "linkedin" },
+  { name: "Twitter", url: "https://x.com/TiNguyn68177148", icon: "twitter" },
+  { name: "Email", url: "mailto:nguyentai21.fit@gmail.com", icon: "mail" },
 ];
 
 export const categories = [

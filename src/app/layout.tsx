@@ -9,10 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://johndoe.dev"),
+  metadataBase: new URL("https://portfolio-dun-five-65.vercel.app"),
   title: {
-    default: "John Doe | Full Stack Developer",
-    template: "%s | John Doe",
+    default: "Tai Nguyen | Full Stack Developer",
+    template: "%s | Tai Nguyen",
   },
   description:
     "A passionate full-stack developer crafting beautiful, performant web experiences with modern technologies like React, Next.js, and Node.js.",
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     "Software Engineer",
     "Portfolio",
   ],
-  authors: [{ name: "John Doe", url: "https://johndoe.dev" }],
-  creator: "John Doe",
+  authors: [{ name: "Tai Nguyen", url: "https://portfolio-dun-five-65.vercel.app" }],
+  creator: "Tai Nguyen",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://johndoe.dev",
-    siteName: "John Doe Portfolio",
-    title: "John Doe | Full Stack Developer",
+    url: "https://portfolio-dun-five-65.vercel.app",
+    siteName: "Tai Nguyen Portfolio",
+    title: "Tai Nguyen | Full Stack Developer",
     description:
       "A passionate full-stack developer crafting beautiful, performant web experiences.",
     images: [
@@ -40,17 +40,17 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "John Doe - Full Stack Developer",
+        alt: "Tai Nguyen - Full Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Doe | Full Stack Developer",
+    title: "Tai Nguyen | Full Stack Developer",
     description:
       "A passionate full-stack developer crafting beautiful, performant web experiences.",
     images: ["/og-image.jpg"],
-    creator: "@johndoe",
+    creator: "@TiNguyn68177148",
   },
   robots: {
     index: true,
@@ -73,13 +73,13 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "John Doe",
-    url: "https://johndoe.dev",
+    name: "Tai Nguyen",
+    url: "https://portfolio-dun-five-65.vercel.app",
     jobTitle: "Full Stack Developer",
     sameAs: [
-      "https://github.com/johndoe",
-      "https://linkedin.com/in/johndoe",
-      "https://twitter.com/johndoe",
+      "https://github.com/ntantai21810",
+      "https://www.linkedin.com/in/nguyentai21/",
+      "https://x.com/TiNguyn68177148",
     ],
     description:
       "A passionate full-stack developer crafting beautiful, performant web experiences.",
@@ -88,7 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://johndoe.dev" />
+        <link rel="canonical" href="https://portfolio-dun-five-65.vercel.app" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
