@@ -117,6 +117,20 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: "3",
+    title: "Planning Poker",
+    description:
+      "A real-time collaborative estimation tool for agile teams to estimate user stories using the Planning Poker technique.",
+    longDescription:
+      "Built a comprehensive Planning Poker application for agile teams. Features include instant room creation without signup, real-time vote synchronization, role-based interactions (Host, Player, Spectator), Fibonacci estimation deck, issue management, password-protected rooms, session invites, and result export functionality. Supports both dark and light themes.",
+    image: "/projects/planning-poker.jpg",
+    technologies: ["Next.js", "TypeScript", "WebSocket", "NestJS", "PostgreSQL", "Tailwind"],
+    category: "fullstack",
+    liveUrl: "https://planning-poker-fe-tau.vercel.app/",
+    githubUrl: "https://github.com/ntantai21810/planning-poker",
+    featured: true,
+  },
+  {
     id: "1",
     title: "Watching movies",
     description:
